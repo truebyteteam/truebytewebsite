@@ -1,3 +1,4 @@
+import Link from "next/link";
 export default function Categories() {
   const categories = [
     {
@@ -5,18 +6,21 @@ export default function Categories() {
       subtitle: "8 Healthy Varieties",
       image: "/categories/laddus.jpg",
       color: "bg-green-700",
+      category: "Laddus",
     },
     {
       title: "True Cookies",
       subtitle: "6 Delicious Flavours",
       image: "/categories/cookies.jpg",
       color: "bg-amber-700",
+      category: "Cookies",
     },
     {
       title: "True Choco's",
       subtitle: "3 Premium Treats",
       image: "/categories/chocos.jpg",
       color: "bg-stone-700",
+      category: "Chocos",
     },
   ];
 
@@ -69,9 +73,12 @@ export default function Categories() {
                 {category.title}
               </h3>
 
-              <button className="mt-6 bg-white text-green-700 px-6 py-3 rounded-full font-semibold hover:bg-green-700 hover:text-white transition">
-                Explore →
-              </button>
+              <Link
+  href={`/products?category=${encodeURIComponent(category.category)}`}
+  className="mt-6 inline-block bg-white text-green-700 px-6 py-3 rounded-full font-semibold hover:bg-green-700 hover:text-white transition"
+>
+  Explore →
+</Link>
 
             </div>
 

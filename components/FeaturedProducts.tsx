@@ -1,5 +1,6 @@
 import ProductCard from "./ProductCard";
 import { products } from "../data/products";
+import Link from "next/link";
 
 export default function FeaturedProducts() {
   return (
@@ -36,9 +37,12 @@ export default function FeaturedProducts() {
 
       </div>
       <div className="text-center mt-14">
-  <button className="bg-green-700 text-white px-8 py-4 rounded-full hover:bg-green-800 transition duration-300 shadow-lg">
-    View All Products →
-  </button>
+  <Link
+  href="/products"
+  className="inline-block bg-green-700 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-800 transition"
+>
+  View All Products →
+</Link>
 </div>
 
     </section>

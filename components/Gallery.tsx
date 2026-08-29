@@ -1,3 +1,4 @@
+import Link from "next/link";
 const images = [
   "/gallery/1.jpg",
   "/gallery/2.jpg",
@@ -44,9 +45,12 @@ export default function Gallery() {
         </div>
 
         <div className="text-center mt-12">
-          <button className="bg-green-700 text-white px-8 py-4 rounded-full hover:bg-green-800 transition">
-            View More Products
-          </button>
+          <Link
+  href="/products"
+  className="inline-block bg-green-700 text-white px-8 py-4 rounded-full hover:bg-green-800 transition"
+>
+  View More Products →
+</Link>
         </div>
 
       </div>

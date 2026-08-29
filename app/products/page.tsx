@@ -4,22 +4,39 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import ProductCard from "../../components/ProductCard";
 import { products } from "../../data/products";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 
 export default function ProductsPage() {
+  const searchParams = useSearchParams();
+
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
   const [sortBy, setSortBy] = useState("default");
+
+  // Read category from URL
+  useEffect(() => {
+    const category = searchParams.get("category");
+
+    if (category === "Laddus") {
+      setSelectedCategory("True Laddus");
+    } else if (category === "Cookies") {
+      setSelectedCategory("True Cookies");
+    } else if (category === "Chocos") {
+      setSelectedCategory("True Choco's");
+    } else {
+      setSelectedCategory("All");
+    }
+  }, [searchParams]);
 
   const filteredProducts = products.filter((product) => {
     const matchesCategory =
       selectedCategory === "All" ||
       product.category === selectedCategory;
 
-    const matchesSearch =
-      product.name
-        .toLowerCase()
-        .includes(searchTerm.toLowerCase());
+    const matchesSearch = product.name
+      .toLowerCase()
+      .includes(searchTerm.toLowerCase());
 
     return matchesCategory && matchesSearch;
   });
