@@ -1,6 +1,7 @@
 "use client";
 
 import { TypeAnimation } from "react-type-animation";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -47,9 +48,12 @@ export default function Hero() {
 
           <div className="flex gap-5 mt-10">
 
-            <button className="bg-green-700 text-white px-8 py-4 rounded-full shadow-lg hover:bg-green-800 hover:scale-105 transition-all duration-300">
+<Link
+  href="/products"
+  className="inline-block bg-green-700 text-white px-8 py-4 rounded-full hover:bg-green-800 transition shadow-lg"
+>
   Shop Now
-</button>
+</Link>
 
 <a
   href="https://wa.me/919490653790"
