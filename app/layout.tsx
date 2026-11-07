@@ -37,7 +37,7 @@ export default function RootLayout({
           <AOSInit />
 
           {/* Festival Celebration */}
-          <div className="mb-4">
+          <div className="mb-1.5">
             <FestivalBanner />
           </div>
 
