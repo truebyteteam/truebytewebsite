@@ -81,13 +81,24 @@ export default function ProductCard({ product }: { product: Product }) {
           )}
         </div>
 
-        <Link
-          href={`/products/${product.id}`}
-          className="mt-6 block w-full bg-green-700 text-white py-3 rounded-full hover:bg-green-800 hover:scale-105 transition-all duration-300 shadow-md text-center"
-        >
-          View Details →
-        </Link>
+        {/* Disable View Details for cookies */}
+        {isComingSoon ? (
+          <button
+            disabled
+            className="mt-6 w-full bg-gray-300 text-gray-500 py-3 rounded-full cursor-not-allowed font-semibold"
+          >
+            View Details — Coming Soon
+          </button>
+        ) : (
+          <Link
+            href={`/products/${product.id}`}
+            className="mt-6 block w-full bg-green-700 text-white py-3 rounded-full hover:bg-green-800 hover:scale-105 transition-all duration-300 shadow-md text-center"
+          >
+            View Details →
+          </Link>
+        )}
 
+        {/* Disable Add to Cart for cookies */}
         {isComingSoon ? (
           <button
             disabled
