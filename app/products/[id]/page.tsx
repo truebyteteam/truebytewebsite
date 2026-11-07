@@ -41,7 +41,7 @@ export default function ProductPage() {
   const sizes = "sizes" in product ? product.sizes : undefined;
 
   const selectedVariant = sizes?.find(
-    (size) => size.name === selectedSize
+    (size) => size.label === selectedSize
   );
 
   const currentPrice = sizes
@@ -140,15 +140,15 @@ export default function ProductPage() {
 
                   {sizes.map((size) => (
                     <button
-                      key={size.name}
-                      onClick={() => setSelectedSize(size.name)}
+                      key={size.label}
+                      onClick={() => setSelectedSize(size.label)}
                       className={`px-6 py-3 rounded-full border-2 font-semibold transition ${
-                        selectedSize === size.name
+                        selectedSize === size.label
                           ? "bg-green-700 text-white border-green-700"
                           : "bg-white text-green-700 border-green-700 hover:bg-green-100"
                       }`}
                     >
-                      {size.name}
+                      {size.label}
                     </button>
                   ))}
 
