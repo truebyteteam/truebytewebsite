@@ -34,7 +34,7 @@ export default function FestivalBanner() {
 
   return (
     <section
-      className="relative overflow-hidden bg-gradient-to-r from-green-950 via-green-800 to-green-950 text-center py-5 px-4 border-b-2 border-yellow-400"
+      className="relative mt-[70px] min-h-[220px] flex items-center justify-center overflow-hidden bg-gradient-to-r from-green-950 via-green-800 to-green-950 text-center px-4 py-8 border-b-2 border-yellow-400"
     >
       {/* Decorative lights */}
       <div className="absolute top-2 left-5 text-2xl animate-pulse">
