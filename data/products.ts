@@ -1,37 +1,34 @@
+
 export const products = [
   // True Laddus
- {
-  id: 1,
-  name: "Classic Dry Fruit Laddu",
-  category: "True Laddus",
-  image: "/products/classic-laddu.jpg",
-  price: 349,
-  weight: "250g",
-  badge: "Best Seller",
-  rating: 4.9,
-
-  description:
-    "Our Classic Dry Fruit Laddu is handcrafted using premium nuts, seeds, dates, and pure ghee. It is naturally sweetened and provides sustained energy without artificial preservatives.",
-
-  ingredients: [
-    "Almonds",
-    "Cashews",
-    "Dates",
-    "Pumpkin Seeds",
-    "Flax Seeds",
-    "Pure Ghee"
-  ],
-
-  benefits: [
-    "Boosts Energy",
-    "Rich in Protein",
-    "Supports Immunity",
-    "Good for Heart Health"
-  ],
-
-  storage:
-    "Store in an airtight container in a cool and dry place. Best consumed within 30 days."
-},
+  {
+    id: 1,
+    name: "Classic Dry Fruit Laddu",
+    category: "True Laddus",
+    image: "/products/classic-laddu.jpg",
+    price: 349,
+    weight: "250g",
+    badge: "Best Seller",
+    rating: 4.9,
+    description:
+      "Our Classic Dry Fruit Laddu is handcrafted using premium nuts, seeds, dates, and pure ghee. It is naturally sweetened and provides sustained energy without artificial preservatives.",
+    ingredients: [
+      "Almonds",
+      "Cashews",
+      "Dates",
+      "Pumpkin Seeds",
+      "Flax Seeds",
+      "Pure Ghee"
+    ],
+    benefits: [
+      "Boosts Energy",
+      "Rich in Protein",
+      "Supports Immunity",
+      "Good for Heart Health"
+    ],
+    storage:
+      "Store in an airtight container in a cool and dry place. Best consumed within 30 days."
+  },
   {
     id: 2,
     name: "Workout / Gym Laddu",
@@ -89,7 +86,7 @@ export const products = [
     weight: "250gms",
   },
 
-  // Cookies
+  // True Cookies
   {
     id: 9,
     name: "Ragi Cookies",
@@ -130,24 +127,44 @@ export const products = [
     image: "/products/chocochip.jpg",
   },
 
-  // Choco's
+  // True Choco's
   {
     id: 15,
-    name: "Safawi Dil Byte",
+    name: "Safawi Dil Bytes",
     category: "True Choco's",
     image: "/products/safawi.jpg",
     badge: "New",
+    price: 149,
+    weight: "Pack of 5",
   },
   {
     id: 16,
     name: "Mini Brownies",
     category: "True Choco's",
     image: "/products/brownie.jpg",
+    price: 199,
+    weight: "100g",
   },
   {
     id: 17,
     name: "Mini TB Chocolates",
     category: "True Choco's",
     image: "/products/tbchoco.jpg",
+    price: 21,
+    weight: "Per piece",
+    sizes: [
+      {
+        label: "Large (L)",
+        price: 50,
+      },
+      {
+        label: "Medium (M)",
+        price: 35,
+      },
+      {
+        label: "Small (S)",
+        price: 21,
+      },
+    ],
   },
 ];
