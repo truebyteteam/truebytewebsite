@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
   FaInstagram,
   FaFacebook,
@@ -71,7 +72,10 @@ export default function Footer() {
 
           <div className="flex gap-5 text-3xl">
 
-            <a href="#">
+            <a  href="https://www.instagram.com/true__byte/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow True Byte on Instagram">
               <FaInstagram className="hover:text-pink-400 transition" />
             </a>
 
@@ -94,7 +98,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-green-800 py-6 text-center text-gray-400">
-        © 2025 True Byte. All Rights Reserved.
+        © 2026 True Byte. All Rights Reserved.
       </div>
 
     </footer>
